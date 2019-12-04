@@ -23,16 +23,13 @@ const Flights = () => {
   }, [location, flights]);
 
   const renderFlights = () => {
-    return nearestFlights.map(flight => {
-      console.log(flight);
-      return (
-        <div className="flight">
-          <h3>Flight Number:{flight.callsign}</h3>
-          <p>Origin Country:{flight.origin_country}</p>
-          <b>Distance: {flight.distance}</b>
-        </div>
-      );
-    });
+    return nearestFlights.map(flight => (
+      <div className="flight">
+        <h3>Flight Number:{flight.callsign}</h3>
+        <p>Origin Country:{flight.origin_country}</p>
+        <b>Distance: {flight.distance}</b>
+      </div>
+    ));
   };
 
   return (

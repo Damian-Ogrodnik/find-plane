@@ -15,6 +15,7 @@ const getNearestFlights = async (
       return flight;
     }
   });
+
   let finalFlights;
   if (nearestFlights !== []) {
     finalFlights = await nearestFlights.map(async flight => {
@@ -32,8 +33,10 @@ const getNearestFlights = async (
       };
     });
   }
+
   return await Promise.all(finalFlights).then(response => {
-    return response;
+    console.log(response);
+    return response.sort((a, b) => (a.distance > b.distance ? 1 : -1));
   });
 };
 
