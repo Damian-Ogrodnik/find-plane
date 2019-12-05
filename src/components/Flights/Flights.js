@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchFlights } from "../../redux/flights/flightsUtils";
 import getLocation from "../../redux/location/locationUtils";
 import { setNearestFlights } from "../../redux/nearestFlights/nearestUtils";
+import Spinner from "../Spinner/Spinner";
 
 const Flights = () => {
   const location = useSelector(state => state.location.location);
@@ -12,15 +13,19 @@ const Flights = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchFlights());
     dispatch(getLocation());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
+    if (flights.length === 0) return;
     dispatch(setNearestFlights(location, flights));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location, flights]);
+  }, [flights]);
+
+  const getNearestFlights = () => {
+    dispatch(fetchFlights());
+  };
 
   const renderFlights = () => {
     return nearestFlights.map(flight => (
@@ -39,9 +44,10 @@ const Flights = () => {
         longitude
       </div>
       <div>
-        <h2>Flights</h2>
+        <button onClick={() => getNearestFlights()}>Get Nearest Flights</button>
         <div>{renderFlights()}</div>
       </div>
+      <Spinner />
     </div>
   );
 };
