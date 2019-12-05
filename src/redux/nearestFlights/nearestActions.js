@@ -19,3 +19,9 @@ export const getNearestFlightsFailure = error => {
     payload: { error }
   };
 };
+
+export const resetNearestFlights = () => {
+  return {
+    type: types.RESET_NEAREST_FLIGHTS
+  };
+};

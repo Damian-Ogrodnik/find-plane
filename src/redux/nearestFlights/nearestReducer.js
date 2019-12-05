@@ -25,6 +25,11 @@ const nearestFligthsReducer = (state = initialState, action) => {
         error: action.payload.error,
         loading: false
       };
+    case types.RESET_NEAREST_FLIGHTS:
+      return {
+        ...state,
+        flights: []
+      };
     default:
       return state;
   }

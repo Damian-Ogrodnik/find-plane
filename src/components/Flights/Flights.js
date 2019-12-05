@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFlights } from "../../redux/flights/flightsUtils";
+import { resetNearestFlights } from "../../redux/nearestFlights/nearestActions";
 import getLocation from "../../redux/location/locationUtils";
 import { setNearestFlights } from "../../redux/nearestFlights/nearestUtils";
 import Spinner from "../Spinner/Spinner";
@@ -24,6 +25,7 @@ const Flights = () => {
   }, [flights]);
 
   const getNearestFlights = () => {
+    dispatch(resetNearestFlights());
     dispatch(fetchFlights());
   };
 
