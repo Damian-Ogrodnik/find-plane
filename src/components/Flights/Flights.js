@@ -6,6 +6,7 @@ import { resetNearestFlights } from "../../redux/nearestFlights/nearestActions";
 import getLocation from "../../redux/location/locationUtils";
 import { setNearestFlights } from "../../redux/nearestFlights/nearestUtils";
 import Spinner from "../Spinner/Spinner";
+import Flight from "../Flight/Flight";
 
 const Flights = () => {
   const location = useSelector(state => state.location.location);
@@ -30,13 +31,7 @@ const Flights = () => {
   };
 
   const renderFlights = () => {
-    return nearestFlights.map(flight => (
-      <div className="flight">
-        <h3>Flight Number:{flight.callsign}</h3>
-        <p>Origin Country:{flight.origin_country}</p>
-        <b>Distance: {flight.distance}</b>
-      </div>
-    ));
+    return nearestFlights.map(flight => <Flight flight={flight} />);
   };
 
   return (
