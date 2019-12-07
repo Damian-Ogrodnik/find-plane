@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import getLocation from "../../redux/location/locationUtils";
 import { useDispatch, useSelector } from "react-redux";
+import logo from "../../assets/airport-icon.png";
+import * as S from "./Header.Styles";
 
 const Header = () => {
   const location = useSelector(state => state.location.location);
@@ -11,12 +13,25 @@ const Header = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const roundPosition = position => {
+    return Math.floor(position * 1000) / 1000;
+  };
+
   return (
-    <div>
-      <h1>Header</h1>
-      Your location: {location.latitude} latitude, {location.longitude}
-      longitude
-    </div>
+    <S.Header>
+      <S.LogoWrapper>
+        <S.Logo src={logo} />
+        <S.Title>FIND PLANE</S.Title>
+      </S.LogoWrapper>
+      <S.LocationWrapper>
+        <S.LocationParagraph>
+          LATITUDE: {roundPosition(location.latitude)}
+        </S.LocationParagraph>
+        <S.LocationParagraph>
+          LONGITUDE: {roundPosition(location.longitude)}
+        </S.LocationParagraph>
+      </S.LocationWrapper>
+    </S.Header>
   );
 };
 
