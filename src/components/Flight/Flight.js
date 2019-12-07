@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const Flight = ({ flight: { callsign, origin_country, distance } }) => {
   return (

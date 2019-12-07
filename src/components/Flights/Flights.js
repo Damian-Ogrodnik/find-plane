@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFlights } from "../../redux/flights/flightsUtils";
 import { resetNearestFlights } from "../../redux/nearestFlights/nearestActions";
 import { setNearestFlights } from "../../redux/nearestFlights/nearestUtils";
 import Spinner from "../Spinner/Spinner";
 import Flight from "../Flight/Flight";
+import * as S from "./Flights.Styles";
 
 const Flights = () => {
   const location = useSelector(state => state.location.location);
@@ -30,11 +30,13 @@ const Flights = () => {
 
   return (
     <div>
-      <div>
-        <button onClick={() => getNearestFlights()}>Get Nearest Flights</button>
-        <div>{renderFlights()}</div>
-      </div>
-      <Spinner />
+      <S.FlexWrapper>
+        <S.Button onClick={() => getNearestFlights()}>GET FLIGHTS</S.Button>
+      </S.FlexWrapper>
+      <S.FlexWrapper>
+        <Spinner />
+      </S.FlexWrapper>
+      <div>{renderFlights()}</div>
     </div>
   );
 };

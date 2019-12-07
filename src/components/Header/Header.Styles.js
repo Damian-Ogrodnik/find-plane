@@ -25,7 +25,6 @@ const LocationParagraph = styled.p`
 `;
 
 const Logo = styled.img`
-  padding: 10px;
   height: 70px;
 `;
 

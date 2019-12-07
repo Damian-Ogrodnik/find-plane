@@ -25,10 +25,10 @@ const Header = () => {
       </S.LogoWrapper>
       <S.LocationWrapper>
         <S.LocationParagraph>
-          LATITUDE: {roundPosition(location.latitude)}
+          LAT: {roundPosition(location.latitude)}
         </S.LocationParagraph>
         <S.LocationParagraph>
-          LONGITUDE: {roundPosition(location.longitude)}
+          LON: {roundPosition(location.longitude)}
         </S.LocationParagraph>
       </S.LocationWrapper>
     </S.Header>

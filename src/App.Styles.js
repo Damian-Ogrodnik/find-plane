@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     body {
         font-family: monospace;
-        background: #222;
+        background: grey;
         color: white;
         text-shadow: -1px -2px 2px rgba(0,0,0,1);
         margin: 0;

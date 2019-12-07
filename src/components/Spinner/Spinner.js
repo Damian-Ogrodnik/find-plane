@@ -10,7 +10,7 @@ const Spinner = () => {
   return (
     <GridLoader
       loading={flightsLoading || nearestFlightsLoading}
-      color={"#123abc"}
+      color={"#FFF"}
     />
   );
 };
