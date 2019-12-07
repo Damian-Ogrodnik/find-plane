@@ -6,7 +6,7 @@ const FlexWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  font-size: 1.2rem;
+  font-size: 2vw;
   color: white;
   margin: 10px;
   padding: 10px;
@@ -33,6 +33,11 @@ const Button = styled.button`
 
 const Board = styled.div`
   border: 3px solid black;
+  padding: 10px;
+  background: rgb(68, 68, 68);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export { FlexWrapper, Button, Board };

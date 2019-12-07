@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import * as S from "./Location.Styles";
 import locationIcon from "../../assets/location-icon.png";
 
-function Location() {
+const Location = () => {
   const location = useSelector(state => state.location.location);
 
   const roundPosition = position => {
@@ -23,6 +23,6 @@ function Location() {
       </S.PositionWrapper>
     </S.LocationWrapper>
   );
-}
+};
 
 export default Location;

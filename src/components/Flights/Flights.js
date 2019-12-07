@@ -5,6 +5,7 @@ import { resetNearestFlights } from "../../redux/nearestFlights/nearestActions";
 import { setNearestFlights } from "../../redux/nearestFlights/nearestUtils";
 import Spinner from "../Spinner/Spinner";
 import Flight from "../Flight/Flight";
+import Board from "../BoardHeader/BoardHeader";
 import * as S from "./Flights.Styles";
 
 const Flights = () => {
@@ -28,6 +29,7 @@ const Flights = () => {
     if (nearestFlights.length !== 0) {
       return (
         <S.Board>
+          <Board />
           {nearestFlights.map(flight => (
             <Flight flight={flight} />
           ))}
