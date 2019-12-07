@@ -17,8 +17,10 @@ const LogoWrapper = styled.div`
 `;
 
 const LocationWrapper = styled.div`
-  font-size: 1rem;
+  display: flex;
 `;
+
+const PositionWrapper = styled.div``;
 
 const LocationParagraph = styled.p`
   font-size: 1rem;
@@ -28,4 +30,17 @@ const Logo = styled.img`
   height: 70px;
 `;
 
-export { Header, LogoWrapper, LocationParagraph, Title, LocationWrapper, Logo };
+const LocationIcon = styled.img`
+  height: 70px;
+`;
+
+export {
+  Header,
+  LogoWrapper,
+  LocationParagraph,
+  Title,
+  LocationWrapper,
+  Logo,
+  LocationIcon,
+  PositionWrapper
+};
