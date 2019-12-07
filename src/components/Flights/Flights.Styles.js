@@ -31,4 +31,8 @@ const Button = styled.button`
   }
 `;
 
-export { FlexWrapper, Button };
+const Board = styled.div`
+  border: 3px solid black;
+`;
+
+export { FlexWrapper, Button, Board };

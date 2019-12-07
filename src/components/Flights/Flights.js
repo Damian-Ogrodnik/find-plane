@@ -25,7 +25,15 @@ const Flights = () => {
   };
 
   const renderFlights = () => {
-    return nearestFlights.map(flight => <Flight flight={flight} />);
+    if (nearestFlights.length !== 0) {
+      return (
+        <S.Board>
+          {nearestFlights.map(flight => (
+            <Flight flight={flight} />
+          ))}
+        </S.Board>
+      );
+    }
   };
 
   return (
@@ -36,7 +44,7 @@ const Flights = () => {
       <S.FlexWrapper>
         <Spinner />
       </S.FlexWrapper>
-      <div>{renderFlights()}</div>
+      {renderFlights()}
     </div>
   );
 };
