@@ -6,25 +6,25 @@ const FlexWrapper = styled.div`
 `;
 
 const Button = styled.button`
+  box-sizing: border-box;
+  transition: all 0.2s ease 0s;
   font-size: 2vw;
   color: white;
-  margin: 10px;
+  margin: 10px 10px 30px 10px;
   padding: 10px;
-
-  border-radius: 0.05em;
-  border: 0.01em solid #444;
-  position: relative;
-  background: #222;
+  background: black;
   text-align: center;
-  line-height: 1;
-  color: #fff;
   font-family: monospace;
-  box-shadow: 0px 0.02em 0 #ccc, 0px 0.05em 0 #000;
-  text-shadow: -1px -2px 2px rgba(0, 0, 0, 1);
-  z-index: 50;
+  border: 2px solid white;
+  box-shadow: 0 8px 6px -6px black
 
   :active {
     transform: translateY(4px);
+  }
+  :hover {
+    border: 2px solid black;
+    background: white;
+    color: black;
   }
   :focus {
     outline: none;
@@ -32,8 +32,10 @@ const Button = styled.button`
 `;
 
 const Board = styled.div`
-  border: 3px solid black;
-  padding: 10px;
+  border: 3px solid white;
+  box-shadow: 0 8px 6px -6px black
+  padding: 10px 0px;
+  margin: 0px 10px;
   background: rgb(68, 68, 68);
   display: flex;
   flex-wrap: wrap;

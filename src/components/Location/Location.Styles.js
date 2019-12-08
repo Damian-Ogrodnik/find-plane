@@ -8,7 +8,7 @@ const LocationWrapper = styled.div`
 const PositionWrapper = styled.div``;
 
 const LocationParagraph = styled.p`
-  font-size: 1rem;
+  font-size: 1.5em;
 `;
 
 const LocationIcon = styled.img`

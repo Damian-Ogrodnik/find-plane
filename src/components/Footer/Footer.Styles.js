@@ -5,7 +5,7 @@ const Footer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-top: 0.3em solid #000;
+  border-top: 0.3em solid white;
   background: rgb(68, 68, 68);
   position: fixed;
   bottom: 0;

@@ -4,12 +4,12 @@ const Header = styled.div`
   background: rgb(68, 68, 68);
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.3em solid #000;
+  border-bottom: 0.3em solid white;
   padding: 10px;
 `;
 
 const Title = styled.div`
-  font-size: 2.5rem;
+  font-size: 2.5em;
 `;
 
 const LogoWrapper = styled.div`
