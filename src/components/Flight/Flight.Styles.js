@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Flight = styled.div`
   display: flex;
-  margin: 5px;
+  margin: 2px;
 `;
 
 const Column = styled.div`

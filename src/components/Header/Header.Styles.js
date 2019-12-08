@@ -6,6 +6,7 @@ const Header = styled.div`
   justify-content: space-between;
   border-bottom: 0.3em solid white;
   padding: 10px;
+  box-shadow: 0 8px 6px -6px black;
 `;
 
 const Title = styled.div`

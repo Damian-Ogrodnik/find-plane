@@ -33,7 +33,7 @@ const Button = styled.button`
 
 const Board = styled.div`
   border: 3px solid white;
-  box-shadow: 0 8px 6px -6px black
+  box-shadow: 0 8px 6px -6px black;
   padding: 10px 0px;
   margin: 0px 10px;
   background: rgb(68, 68, 68);

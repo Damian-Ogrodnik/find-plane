@@ -13,8 +13,12 @@ const LocationParagraph = styled.p`
 
 const LocationIcon = styled.img`
   height: 70px;
+  filter: contrast(160%);
   :hover {
-    background: white;
+    filter: brightness(100);
+  }
+  :active {
+    transform: translateY(4px);
   }
 `;
 
