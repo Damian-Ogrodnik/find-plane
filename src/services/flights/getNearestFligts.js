@@ -23,11 +23,12 @@ const getNearestFlights = async (
         { latitude, longitude },
         { latitude: flight[6], longitude: flight[5] }
       );
+      const distanceKM = Math.floor(distance / 1000);
       return {
         icao24: flight[0],
         callsign: flight[1],
         origin_country: flight[2],
-        distance: distance,
+        distance: distanceKM,
         latitude: flight[6],
         longitude: flight[5]
       };
