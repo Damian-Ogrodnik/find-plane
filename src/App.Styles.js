@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -9,9 +10,14 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         min-height: 100vh;
         padding: 0;
-        border: 3px solid redd;
     }
 
 `;
 
-export { GlobalStyle };
+const App = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+export { GlobalStyle, App };

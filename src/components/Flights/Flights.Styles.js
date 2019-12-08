@@ -40,4 +40,8 @@ const Board = styled.div`
   justify-content: center;
 `;
 
-export { FlexWrapper, Button, Board };
+const Flights = styled.div`
+  margin: 20px 0px 50px 0px;
+`;
+
+export { FlexWrapper, Button, Board, Flights };

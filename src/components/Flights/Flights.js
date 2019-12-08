@@ -39,7 +39,7 @@ const Flights = () => {
   };
 
   return (
-    <div>
+    <S.Flights>
       <S.FlexWrapper>
         <S.Button onClick={() => getNearestFlights()}>GET FLIGHTS</S.Button>
       </S.FlexWrapper>
@@ -47,7 +47,7 @@ const Flights = () => {
         <Spinner />
       </S.FlexWrapper>
       {renderFlights()}
-    </div>
+    </S.Flights>
   );
 };
 

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const Header = styled.div`
+  background: rgb(68, 68, 68);
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.3em solid #444;
+  border-bottom: 0.3em solid #000;
   padding: 10px;
 `;
 
