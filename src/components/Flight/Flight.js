@@ -9,16 +9,17 @@ const Flight = ({ flight: { callsign, origin_country, distance } }) => {
   const renderFlight = (category, maxLetters) => {
     let letters = maxLetters;
     let word = category.toString();
+    if (word === "") word = "------";
     let lettersArray = word.split("");
     if (lettersArray.length >= maxLetters) {
       lettersArray = lettersArray.slice(0, maxLetters);
     }
     const finalArray = lettersArray.map(letter => {
       letters--;
-      return <S.Letter>{letter}</S.Letter>;
+      return <S.Letter key={Math.random()}>{letter}</S.Letter>;
     });
     for (let i = 0; i < letters; i++) {
-      finalArray.push(<S.Letter />);
+      finalArray.push(<S.Letter key={Math.random()} />);
     }
     return finalArray;
   };

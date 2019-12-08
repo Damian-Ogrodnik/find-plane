@@ -36,7 +36,6 @@ const getNearestFlights = async (
   }
 
   return await Promise.all(finalFlights).then(response => {
-    console.log(response);
     return response.sort((a, b) => (a.distance > b.distance ? 1 : -1));
   });
 };

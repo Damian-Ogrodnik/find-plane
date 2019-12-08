@@ -31,7 +31,7 @@ const Flights = () => {
         <S.Board>
           <Board />
           {nearestFlights.map(flight => (
-            <Flight flight={flight} />
+            <Flight key={flight.callsign} flight={flight} />
           ))}
         </S.Board>
       );

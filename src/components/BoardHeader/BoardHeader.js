@@ -10,13 +10,15 @@ const BoardHeader = () => {
   const renderLetters = category => {
     const lettersArray = category.split("");
     createdCells += lettersArray.length;
-    return lettersArray.map(letter => <S.Letter>{letter}</S.Letter>);
+    return lettersArray.map(letter => (
+      <S.Letter key={Math.random()}>{letter}</S.Letter>
+    ));
   };
 
   const renderSpaceBar = () => {
     const spaceBar = [];
     for (let i = 0; i < createdCells; i++) {
-      spaceBar.push(<S.Letter />);
+      spaceBar.push(<S.Letter key={Math.random()} />);
     }
     return spaceBar;
   };
