@@ -44,6 +44,7 @@ const Board = styled.div`
 
 const Flights = styled.div`
   margin: 20px 0px 50px 0px;
+  flex-grow: 1;
 `;
 
 export { FlexWrapper, Button, Board, Flights };

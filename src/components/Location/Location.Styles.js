@@ -13,6 +13,9 @@ const LocationParagraph = styled.p`
 
 const LocationIcon = styled.img`
   height: 70px;
+  :hover {
+    background: white;
+  }
 `;
 
 export { LocationWrapper, PositionWrapper, LocationParagraph, LocationIcon };
