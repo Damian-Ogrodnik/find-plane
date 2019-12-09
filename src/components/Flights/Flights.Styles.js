@@ -3,6 +3,8 @@ import styled from "styled-components";
 const FlexWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const Button = styled.button`
@@ -47,4 +49,8 @@ const Flights = styled.div`
   flex-grow: 1;
 `;
 
-export { FlexWrapper, Button, Board, Flights };
+const Error = styled.div`
+  font-size: 2vw;
+`;
+
+export { FlexWrapper, Button, Board, Flights, Error };

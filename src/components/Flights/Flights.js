@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFlights } from "../../redux/flights/flightsUtils";
 import { resetNearestFlights } from "../../redux/nearestFlights/nearestActions";
 import { setNearestFlights } from "../../redux/nearestFlights/nearestUtils";
 import Spinner from "../Spinner/Spinner";
 import Flight from "../Flight/Flight";
-import Board from "../BoardHeader/BoardHeader";
+import BoardHeader from "../BoardHeader/BoardHeader";
 import * as S from "./Flights.Styles";
 
 const Flights = () => {
+  const [clicked, setClick] = useState(false);
   const location = useSelector(state => state.location.location);
+  const locationError = useSelector(state => state.location.error);
   const flights = useSelector(state => state.flights.flights);
   const nearestFlights = useSelector(state => state.nearestFlights.flights);
   const dispatch = useDispatch();
@@ -21,6 +23,8 @@ const Flights = () => {
   }, [flights]);
 
   const getNearestFlights = () => {
+    if (locationError) return setClick(true);
+    setClick(false);
     dispatch(resetNearestFlights());
     dispatch(fetchFlights());
   };
@@ -29,7 +33,7 @@ const Flights = () => {
     if (nearestFlights.length !== 0) {
       return (
         <S.Board>
-          <Board />
+          <BoardHeader />
           {nearestFlights.map(flight => (
             <Flight key={flight.callsign} flight={flight} />
           ))}
@@ -38,13 +42,17 @@ const Flights = () => {
     }
   };
 
+  const renderError = () => {
+    if (locationError && clicked)
+      return <S.Error>YOU HAVE TO SET LOCATION BEFORE SEARCH</S.Error>;
+  };
+
   return (
     <S.Flights>
       <S.FlexWrapper>
         <S.Button onClick={() => getNearestFlights()}>GET FLIGHTS</S.Button>
-      </S.FlexWrapper>
-      <S.FlexWrapper>
         <Spinner />
+        {renderError()}
       </S.FlexWrapper>
       {renderFlights()}
     </S.Flights>
