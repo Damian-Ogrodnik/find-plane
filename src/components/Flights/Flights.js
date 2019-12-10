@@ -10,10 +10,12 @@ import * as S from "./Flights.Styles";
 
 const Flights = () => {
   const [clicked, setClick] = useState(false);
+
   const location = useSelector(state => state.location.location);
   const locationError = useSelector(state => state.location.error);
   const flights = useSelector(state => state.flights.flights);
   const nearestFlights = useSelector(state => state.nearestFlights.flights);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
