@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Modal from "react-modal";
 
 const customStyles = {
@@ -14,10 +15,11 @@ const customStyles = {
 
 //Modal.setAppElement("#root");
 
-const LocationModal = ({ open }) => {
+const LocationModal = () => {
+  const openModal = useSelector(state => state.locationModal.openModal);
   return (
     <Modal
-      isOpen={open}
+      isOpen={openModal}
       // onAfterOpen={this.afterOpenModal}
       // onRequestClose={this.closeModal}
       style={customStyles}
