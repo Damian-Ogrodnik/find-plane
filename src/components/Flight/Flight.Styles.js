@@ -28,7 +28,6 @@ const Letter = styled.div`
   font-family: monospace;
   box-shadow: 0px 0.02em 0 #ccc, 0px 0.05em 0 #000;
   text-shadow: -1px -2px 2px rgba(0, 0, 0, 1);
-  z-index: 50;
 
   :after {
     position: absolute;
@@ -40,7 +39,6 @@ const Letter = styled.div`
     width: 100%;
     height: 0px;
     opacity: 0.8;
-    z-index: 10;
     margin-top: -1px;
   }
 `;
