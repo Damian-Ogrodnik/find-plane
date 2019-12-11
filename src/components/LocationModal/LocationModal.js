@@ -1,6 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Modal from "react-modal";
+import { closeModal } from "../../redux/locationModal/modalActions";
+import * as S from "./Location.Styles";
 
 const customStyles = {
   content: {
@@ -9,7 +11,10 @@ const customStyles = {
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
-    transform: "translate(-50%, -50%)"
+    background: "rgb(68, 68, 68)",
+    border: "2px solid white",
+    transform: "translate(-50%, -50%)",
+    width: "75%"
   }
 };
 
@@ -17,16 +22,20 @@ const customStyles = {
 
 const LocationModal = () => {
   const openModal = useSelector(state => state.locationModal.openModal);
+  const dispatch = useDispatch();
+
   return (
     <Modal
       isOpen={openModal}
       // onAfterOpen={this.afterOpenModal}
       // onRequestClose={this.closeModal}
       style={customStyles}
-      contentLabel="Example Modal"
+      contentLabel="Location Modal"
     >
-      <div>I am a modal</div>
-      <form></form>
+      <S.FlexWrapper>
+        <S.Header>INSERT LOCATION</S.Header>
+        <S.Button onClick={() => dispatch(closeModal())}>SAVE</S.Button>
+      </S.FlexWrapper>
     </Modal>
   );
 };
