@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Modal from "react-modal";
 import { closeModal } from "../../redux/locationModal/modalActions";
 import * as S from "./Location.Styles";
+import GoogleMap from "../Map/GoogleMap";
 
 const customStyles = {
   content: {
@@ -13,7 +14,8 @@ const customStyles = {
     background: "rgb(68, 68, 68)",
     border: "2px solid white",
     transform: "translate(-50%, -50%)",
-    width: "75%"
+    width: "75%",
+    height: "80%"
   }
 };
 
@@ -32,8 +34,8 @@ const LocationModal = () => {
       contentLabel="Location Modal"
     >
       <S.FlexWrapper>
-        <S.Header>INSERT LOCATION</S.Header>
-        <form>
+        <S.Header>SELECT LOCATION</S.Header>
+        {/* <form>
           <div>
             LATITUDE
             <input type="text" />
@@ -42,7 +44,11 @@ const LocationModal = () => {
             LONGITUDE
             <input type="text" />
           </div>
-        </form>
+        </form> */}
+        <S.MapWrapper>
+          <GoogleMap />
+        </S.MapWrapper>
+
         <S.Button onClick={() => dispatch(closeModal())}>SAVE</S.Button>
       </S.FlexWrapper>
     </Modal>

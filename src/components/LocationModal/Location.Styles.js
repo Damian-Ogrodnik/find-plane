@@ -10,7 +10,7 @@ const Button = styled.button`
   transition: all 0.2s ease 0s;
   font-size: 2vw;
   color: white;
-  margin: 10px 10px 30px 10px;
+  margin: 30px 10px;
   padding: 10px;
   background: black;
   text-align: center;
@@ -31,10 +31,19 @@ const Button = styled.button`
   }
 `;
 
+const MapWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  div:first-child {
+    position: relative !important;
+    height: 100%;
+    `;
+
 const FlexWrapper = styled.div`
   display: flex;
+  height: 100%;
   align-items: center;
   flex-direction: column;
 `;
 
-export { Header, Button, FlexWrapper };
+export { Header, Button, FlexWrapper, MapWrapper };
