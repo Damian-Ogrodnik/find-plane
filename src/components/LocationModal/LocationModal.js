@@ -10,7 +10,6 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    marginRight: "-50%",
     background: "rgb(68, 68, 68)",
     border: "2px solid white",
     transform: "translate(-50%, -50%)",
@@ -34,6 +33,16 @@ const LocationModal = () => {
     >
       <S.FlexWrapper>
         <S.Header>INSERT LOCATION</S.Header>
+        <form>
+          <div>
+            LATITUDE
+            <input type="text" />
+          </div>
+          <div>
+            LONGITUDE
+            <input type="text" />
+          </div>
+        </form>
         <S.Button onClick={() => dispatch(closeModal())}>SAVE</S.Button>
       </S.FlexWrapper>
     </Modal>

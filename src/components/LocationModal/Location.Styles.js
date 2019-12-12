@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Header = styled.div`
   font-size: 2em;
+  margin: 0px 0px 20px 0px;
 `;
 
 const Button = styled.button`
