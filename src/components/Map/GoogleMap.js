@@ -23,15 +23,18 @@ class GoogleMap extends React.Component {
     };
   }
   mapClicked(mapProps, map, clickEvent) {
-    console.log(clickEvent.latLng.lat());
-    console.log(clickEvent.latLng.lng());
-    console.log(this.state.displayMarker);
     this.setState({
-      displayMarker: true,
       lat: clickEvent.latLng.lat(),
       lng: clickEvent.latLng.lng()
     });
   }
+
+  roundPosition(position) {
+    return position === "lat"
+      ? Math.floor(this.state.lat * 1000) / 1000
+      : Math.floor(this.state.lng * 1000) / 1000;
+  }
+
   render() {
     return (
       <Map
@@ -48,7 +51,12 @@ class GoogleMap extends React.Component {
           visible={true}
           position={{ lat: this.state.lat, lng: this.state.lng }}
         >
-          <S.infoWrapper>CHOSEN POSITION</S.infoWrapper>
+          <S.infoWrapper>
+            <S.Header>CHOSEN POSITION</S.Header>
+            <S.Position>
+              LAT: {this.roundPosition("lat")} LON: {this.roundPosition("lng")}
+            </S.Position>
+          </S.infoWrapper>
         </InfoWindow>
       </Map>
     );
