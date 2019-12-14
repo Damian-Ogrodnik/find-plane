@@ -20,7 +20,7 @@ const customStyles = {
   }
 };
 
-//Modal.setAppElement("#root");
+Modal.setAppElement("#root");
 
 const LocationModal = () => {
   const openModal = useSelector(state => state.locationModal.openModal);
