@@ -9,6 +9,6 @@ export const selectLocation = selectedLocation => {
 
 export const resetSelectedLocation = () => {
   return {
-    type: types.resetSelectedLocation
+    type: types.RESET_LOCATION
   };
 };

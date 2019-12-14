@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { selectLocation } from "../../redux/selectedLocation/selectLocationActions";
 import { Map, GoogleApiWrapper, InfoWindow } from "google-maps-react";
 import * as S from "./GoogleMap.Styles";
 
@@ -22,11 +24,16 @@ class GoogleMap extends React.Component {
       lng: 0
     };
   }
+
   mapClicked(mapProps, map, clickEvent) {
-    this.setState({
-      lat: clickEvent.latLng.lat(),
-      lng: clickEvent.latLng.lng()
-    });
+    this.setState(
+      {
+        lat: clickEvent.latLng.lat(),
+        lng: clickEvent.latLng.lng()
+      },
+      () =>
+        this.props.selectLocation({ lat: this.state.lat, lon: this.state.lng })
+    );
   }
 
   roundPosition(position) {
@@ -63,6 +70,12 @@ class GoogleMap extends React.Component {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    selectLocation: location => dispatch(selectLocation(location))
+  };
+};
+
 export default GoogleApiWrapper({
   apiKey: "AIzaSyAUjCt82CRJ4gJW92PLix2ul981OcvpmFA"
-})(GoogleMap);
+})(connect(null, mapDispatchToProps)(GoogleMap));
