@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Modal from "react-modal";
 import { closeModal } from "../../redux/locationModal/modalActions";
+import { getLocationSucces } from "../../redux/location/locationActions";
 import * as S from "./Location.Styles";
 import GoogleMap from "../Map/GoogleMap";
 
@@ -23,33 +24,28 @@ const customStyles = {
 
 const LocationModal = () => {
   const openModal = useSelector(state => state.locationModal.openModal);
+  const selectedLocation = useSelector(
+    state => state.selectedLocation.selectedLocation
+  );
   const dispatch = useDispatch();
+
+  const setLocation = () => {
+    dispatch(closeModal());
+    dispatch(getLocationSucces(selectedLocation));
+  };
 
   return (
     <Modal
       isOpen={openModal}
-      // onAfterOpen={this.afterOpenModal}
-      // onRequestClose={this.closeModal}
       style={customStyles}
       contentLabel="Location Modal"
     >
       <S.FlexWrapper>
         <S.Header>SELECT LOCATION</S.Header>
-        {/* <form>
-          <div>
-            LATITUDE
-            <input type="text" />
-          </div>
-          <div>
-            LONGITUDE
-            <input type="text" />
-          </div>
-        </form> */}
         <S.MapWrapper>
           <GoogleMap />
         </S.MapWrapper>
-
-        <S.Button onClick={() => dispatch(closeModal())}>SAVE</S.Button>
+        <S.Button onClick={() => setLocation()}>SAVE</S.Button>
       </S.FlexWrapper>
     </Modal>
   );

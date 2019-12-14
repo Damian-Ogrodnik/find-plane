@@ -25,14 +25,17 @@ class GoogleMap extends React.Component {
     };
   }
 
-  mapClicked(mapProps, map, clickEvent) {
+  setLocation(mapProps, map, clickEvent) {
     this.setState(
       {
         lat: clickEvent.latLng.lat(),
         lng: clickEvent.latLng.lng()
       },
       () =>
-        this.props.selectLocation({ lat: this.state.lat, lon: this.state.lng })
+        this.props.selectLocation({
+          latitude: this.state.lat,
+          longitude: this.state.lng
+        })
     );
   }
 
@@ -50,7 +53,7 @@ class GoogleMap extends React.Component {
         style={mapStyles}
         initialCenter={{ lat: 0, lng: 0 }}
         onClick={(mapProps, map, clickEven) =>
-          this.mapClicked(mapProps, map, clickEven)
+          this.setLocation(mapProps, map, clickEven)
         }
       >
         <InfoWindow
