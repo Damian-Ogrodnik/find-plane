@@ -15,9 +15,9 @@ const locationReducer = (state = initialState, action) => {
       };
     case types.GET_LOCATION_SUCCESS:
       return {
-        ...state,
         location: action.payload.location,
-        loading: false
+        loading: false,
+        error: ""
       };
     case types.GET_LOCATION_FAILURE:
       return {
