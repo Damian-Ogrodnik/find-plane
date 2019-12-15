@@ -18,8 +18,11 @@ const getNearestFlights = async (
 
   let finalFlights;
   if (nearestFlights !== []) {
-    finalFlights = await nearestFlights.map(async flight => {
-      const distance = await getDistance(
+    const filteredFlights = await nearestFlights.filter(
+      flight => flight[5] || flight[6] !== null
+    );
+    finalFlights = await filteredFlights.map(async flight => {
+      const distance = getDistance(
         { latitude, longitude },
         { latitude: flight[6], longitude: flight[5] }
       );

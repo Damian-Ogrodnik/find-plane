@@ -5,12 +5,15 @@ export const setNearestFlights = (location, flightsArray) => async dispatch => {
   dispatch(actions.getNearestFlights());
   let flights = await getNearestFlights(location, flightsArray);
   if (flights.length === 0) {
-    flights = await getNearestFlights(location, flightsArray, 30);
-
-    // flightsEXP.length === 0
-    //   ? dispatch(actions.getNearestFlightsFailure("Something went wrong..."))
-    //   : dispatch(actions.getNearestFlightsSucces(flights));
+    flights = await getNearestFlights(location, flightsArray, 50);
+    flights.length === 0
+      ? dispatch(actions.getNearestFlightsFailure("Something went wrong..."))
+      : flights.length > 20
+      ? dispatch(actions.getNearestFlightsSucces(flights.splice(0, 19)))
+      : dispatch(actions.getNearestFlightsSucces(flights));
   } else {
-    dispatch(actions.getNearestFlightsSucces(flights));
+    flights.length > 20
+      ? dispatch(actions.getNearestFlightsSucces(flights.splice(0, 19)))
+      : dispatch(actions.getNearestFlightsSucces(flights));
   }
 };
