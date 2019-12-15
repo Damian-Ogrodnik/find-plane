@@ -31,7 +31,8 @@ const LocationModal = () => {
 
   const setLocation = () => {
     dispatch(closeModal());
-    dispatch(getLocationSucces(selectedLocation));
+    if (Object.entries(selectedLocation).length !== 0)
+      dispatch(getLocationSucces(selectedLocation));
   };
 
   return (
