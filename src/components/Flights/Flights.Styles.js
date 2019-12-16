@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import image from "../../assets/plane-background.jpg";
 
 const FlexWrapper = styled.div`
   display: flex;
@@ -45,7 +46,14 @@ const Board = styled.div`
 `;
 
 const Flights = styled.div`
-  margin: 20px 0px 50px 0px;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(88, 88, 88, 0.7)
+  ),url("${image}");
+  background-size: cover; 
+  background-position: center;
+  padding: 20px 0px 50px 0px;
   flex-grow: 1;
 `;
 
