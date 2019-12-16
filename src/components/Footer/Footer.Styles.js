@@ -5,15 +5,15 @@ const Footer = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-top: 0.3em solid white;
+  border-top: 0.3rem solid white;
   background: rgb(68, 68, 68);
-  height: 50px;
+  height: 5rem;
 `;
 
 const Paragraph = styled.div`
-  font-size: 1vw;
+  font-size: 2rem;
   a {
-    font-size: 1vw;
+    font-size: 2rem;
     text-decoration: none;
     color: white;
   }

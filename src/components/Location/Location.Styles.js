@@ -8,11 +8,11 @@ const LocationWrapper = styled.div`
 const PositionWrapper = styled.div``;
 
 const LocationParagraph = styled.p`
-  font-size: 1.5em;
+  font-size: 1.75rem;
 `;
 
 const LocationIcon = styled.img`
-  height: 70px;
+  height: 7rem;
   filter: contrast(160%);
   :hover {
     filter: brightness(100);

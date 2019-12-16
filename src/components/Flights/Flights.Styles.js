@@ -13,12 +13,12 @@ const Button = styled.button`
   transition: all 0.2s ease 0s;
   font-size: 2vw;
   color: white;
-  margin: 10px 10px 30px 10px;
-  padding: 10px;
+  margin: 1rem 1rem 3rem 1rem;
+  padding: 1rem;
   background: black;
   text-align: center;
   font-family: monospace;
-  border: 2px solid white;
+  border: 0.2rem solid white;
   box-shadow: 0 8px 6px -6px black
 
   :active {
@@ -35,10 +35,10 @@ const Button = styled.button`
 `;
 
 const Board = styled.div`
-  border: 3px solid white;
+  border: 0.3rem solid white;
   box-shadow: 0 8px 6px -6px black;
-  padding: 10px 0px;
-  margin: 0px 10px;
+  padding: 1rem 0px;
+  margin: 0px 1rem;
   background: rgb(68, 68, 68);
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +53,7 @@ const Flights = styled.div`
   ),url("${image}");
   background-size: cover; 
   background-position: center;
-  padding: 20px 0px 50px 0px;
+  padding: 1rem 0px 5rem 0px;
   flex-grow: 1;
 `;
 

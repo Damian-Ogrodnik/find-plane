@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const BoardHeader = styled.div`
   display: flex;
-  margin: 2px;
+  margin: 0.2rem;
 `;
 
 const Column = styled.div`

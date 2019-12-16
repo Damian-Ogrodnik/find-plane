@@ -2,6 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+    *{
+      font-size: 62.5%;
+    }
     body {
         font-family: monospace;
         background: grey;

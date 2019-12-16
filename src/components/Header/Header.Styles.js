@@ -4,13 +4,13 @@ const Header = styled.div`
   background: rgb(68, 68, 68);
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.3em solid white;
-  padding: 10px;
+  border-bottom: 0.3rem solid white;
+  padding: 1rem;
   box-shadow: 0 8px 6px -6px black;
 `;
 
 const Title = styled.div`
-  font-size: 2.5em;
+  font-size: 3rem;
 `;
 
 const LogoWrapper = styled.div`
@@ -19,7 +19,7 @@ const LogoWrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 70px;
+  height: 7rem;
 `;
 
 export { Header, LogoWrapper, Title, Logo };

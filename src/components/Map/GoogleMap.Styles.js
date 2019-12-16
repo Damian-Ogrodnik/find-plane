@@ -7,12 +7,13 @@ const infoWrapper = styled.div`
 
 const Header = styled.div`
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.75rem;
 `;
 
 const Position = styled.div`
   display: flex;
   flex-direction: column;
+  font-size: 1.5rem;
 `;
 
 export { infoWrapper, Header, Position };
