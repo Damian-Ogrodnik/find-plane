@@ -25,6 +25,13 @@ class GoogleMap extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({
+      lat: this.props.location.latitude,
+      lng: this.props.location.longitude
+    });
+  }
+
   setLocation(mapProps, map, clickEvent) {
     this.setState(
       {
@@ -79,6 +86,12 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+const mapStateToProps = state => {
+  return {
+    location: state.location.location
+  };
+};
+
 export default GoogleApiWrapper({
   apiKey: "AIzaSyAUjCt82CRJ4gJW92PLix2ul981OcvpmFA"
-})(connect(null, mapDispatchToProps)(GoogleMap));
+})(connect(mapStateToProps, mapDispatchToProps)(GoogleMap));

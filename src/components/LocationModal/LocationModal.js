@@ -13,7 +13,7 @@ const customStyles = {
     right: "auto",
     bottom: "auto",
     background: "rgb(68, 68, 68)",
-    border: "2px solid white",
+    border: "0.2rem solid white",
     transform: "translate(-50%, -50%)",
     width: "75%",
     height: "80%"
