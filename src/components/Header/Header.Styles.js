@@ -20,6 +20,10 @@ const LogoWrapper = styled.div`
 
 const Logo = styled.img`
   height: 7rem;
+  @media only screen and (max-width: 600px) {
+      height: 5rem;
+    }
+  }
 `;
 
 export { Header, LogoWrapper, Title, Logo };

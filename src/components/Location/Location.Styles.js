@@ -20,6 +20,10 @@ const LocationIcon = styled.img`
   :active {
     transform: translateY(4px);
   }
+  @media only screen and (max-width: 600px) {
+    height: 5rem;
+  }
+}
 `;
 
 export { LocationWrapper, PositionWrapper, LocationParagraph, LocationIcon };

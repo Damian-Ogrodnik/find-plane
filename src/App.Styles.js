@@ -15,7 +15,11 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
-
+    @media only screen and (max-width: 600px)  {
+      *{
+        font-size: 50%;
+      }
+    }
 `;
 
 const App = styled.div`
