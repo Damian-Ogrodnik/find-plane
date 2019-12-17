@@ -31,6 +31,21 @@ const Button = styled.button`
   }
 `;
 
+const CloseButton = styled(Button)`
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 4rem;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+`;
+
 const MapWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -46,4 +61,4 @@ const FlexWrapper = styled.div`
   flex-direction: column;
 `;
 
-export { Header, Button, FlexWrapper, MapWrapper };
+export { Header, Button, FlexWrapper, MapWrapper, CloseButton };

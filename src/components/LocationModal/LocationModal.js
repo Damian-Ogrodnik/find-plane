@@ -43,6 +43,7 @@ const LocationModal = () => {
     >
       <S.FlexWrapper>
         <S.Header>SELECT LOCATION</S.Header>
+        <S.CloseButton onClick={() => dispatch(closeModal())}>X</S.CloseButton>
         <S.MapWrapper>
           <GoogleMap />
         </S.MapWrapper>
