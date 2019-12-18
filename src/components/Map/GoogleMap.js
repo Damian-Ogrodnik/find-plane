@@ -26,6 +26,7 @@ class GoogleMap extends React.Component {
   }
 
   componentDidMount() {
+    if (!this.props.location.latitude || !this.props.location.longitude) return;
     this.setState({
       lat: this.props.location.latitude,
       lng: this.props.location.longitude
