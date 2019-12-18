@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Modal from "react-modal";
 import { closeModal } from "../../redux/locationModal/modalActions";
 import { getLocationSucces } from "../../redux/location/locationActions";
-import * as S from "./Location.Styles";
+import * as S from "./LocationModal.Styles";
 import GoogleMap from "../Map/GoogleMap";
 
 const customStyles = {

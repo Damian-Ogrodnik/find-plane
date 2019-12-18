@@ -3,6 +3,9 @@ import styled from "styled-components";
 const Header = styled.div`
   font-size: 3rem;
   margin: 0px 0px 2rem 0px;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const Button = styled.button`
