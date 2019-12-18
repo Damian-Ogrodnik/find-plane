@@ -41,6 +41,11 @@ const Letter = styled.div`
     opacity: 0.8;
     margin-top: -1px;
   }
+  @media only screen and (max-width: 600px) {
+    :after {
+      border-top: none;
+      border-bottom: none;
+  }
 `;
 
 export { Flight, Column, Letter };
