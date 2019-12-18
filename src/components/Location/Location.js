@@ -22,14 +22,20 @@ const Location = () => {
         onClick={() => dispatch(openModal())}
       />
       <S.PositionWrapper>
-        <S.LocationParagraph>
-          {locationError
-            ? locationError.toUpperCase()
-            : `LAT: ${roundPosition(location.latitude)}`}
-        </S.LocationParagraph>
-        <S.LocationParagraph>
-          {locationError ? null : `LON: ${roundPosition(location.longitude)}`}
-        </S.LocationParagraph>
+        {locationError ? (
+          <S.LocationParagraph>
+            {locationError.toUpperCase()}
+          </S.LocationParagraph>
+        ) : (
+          <>
+            <S.LocationParagraph>
+              LAT: {roundPosition(location.latitude)}
+            </S.LocationParagraph>
+            <S.LocationParagraph>
+              LON: {roundPosition(location.longitude)}
+            </S.LocationParagraph>
+          </>
+        )}
       </S.PositionWrapper>
       <LocationModal />
     </S.LocationWrapper>

@@ -9,6 +9,7 @@ const PositionWrapper = styled.div``;
 
 const LocationParagraph = styled.p`
   font-size: 1.75rem;
+  text-align: right;
 `;
 
 const LocationIcon = styled.img`

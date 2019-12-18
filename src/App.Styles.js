@@ -4,16 +4,15 @@ import styled from "styled-components";
 const GlobalStyle = createGlobalStyle`
     *{
       font-size: 62.5%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     body {
         font-family: monospace;
-        background: grey;
         color: white;
         text-shadow: -1px -2px 2px rgba(0,0,0,1);
-        margin: 0;
         min-height: 100vh;
-        padding: 0;
-        box-sizing: border-box;
     }
     @media only screen and (max-width: 600px)  {
       *{
