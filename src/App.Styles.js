@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: monospace;
         color: white;
         text-shadow: -1px -2px 2px rgba(0,0,0,1);
-        min-height: 100vh;
     }
     @media only screen and (max-width: 600px)  {
       *{

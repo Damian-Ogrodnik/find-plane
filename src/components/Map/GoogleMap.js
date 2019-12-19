@@ -11,11 +11,6 @@ const mapStyles = {
   border: "2px solid black"
 };
 
-const infoStyles = {
-  position: "relative",
-  border: "30px solid red !important"
-};
-
 class GoogleMap extends React.Component {
   constructor(props) {
     super(props);
@@ -65,14 +60,14 @@ class GoogleMap extends React.Component {
         }
       >
         <InfoWindow
-          style={infoStyles}
           visible={true}
           position={{ lat: this.state.lat, lng: this.state.lng }}
         >
           <S.infoWrapper>
             <S.Header>CHOSEN POSITION</S.Header>
             <S.Position>
-              LAT: {this.roundPosition("lat")} LON: {this.roundPosition("lng")}
+              <S.Paragraph>LAT: {this.roundPosition("lat")}</S.Paragraph>
+              <S.Paragraph>LON: {this.roundPosition("lng")}</S.Paragraph>
             </S.Position>
           </S.infoWrapper>
         </InfoWindow>
