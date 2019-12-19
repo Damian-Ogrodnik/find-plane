@@ -13,6 +13,18 @@ const GlobalStyle = createGlobalStyle`
         color: white;
         text-shadow: -1px -2px 2px rgba(0,0,0,1);
     }
+
+    body::-webkit-scrollbar {
+      width: 0.75rem;
+    }
+    body::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: white;
+      outline: 1px solid slategrey;
+    }
+
     @media only screen and (max-width: 600px)  {
       *{
         font-size: 50%;
