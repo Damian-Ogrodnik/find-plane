@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { fetchFlights } from "../../redux/flights/flightsUtils";
 import { resetNearestFlights } from "../../redux/nearestFlights/nearestActions";
 import { setNearestFlights } from "../../redux/nearestFlights/nearestUtils";
+
 import Spinner from "../Spinner/Spinner";
 import Flight from "../Flight/Flight";
 import BoardHeader from "../BoardHeader/BoardHeader";
@@ -42,11 +44,6 @@ const Flights = () => {
         </S.Board>
       );
     }
-  };
-
-  const renderError = () => {
-    if (locationError && clicked)
-      return <S.Error>YOU HAVE TO SET LOCATION BEFORE SEARCH</S.Error>;
   };
 
   return (

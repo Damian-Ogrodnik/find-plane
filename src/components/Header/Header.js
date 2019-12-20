@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
-import getLocation from "../../redux/location/locationUtils";
 import { useDispatch } from "react-redux";
+
+import getLocation from "../../redux/location/locationUtils";
+
+import Location from "../Location/Location";
 import logo from "../../assets/airport-icon.png";
 import * as S from "./Header.Styles";
-import Location from "../Location/Location";
 
 const Header = () => {
   const dispatch = useDispatch();

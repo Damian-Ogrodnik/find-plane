@@ -58,7 +58,7 @@ const Flights = styled.div`
 `;
 
 const Error = styled.div`
-  font-size: 2vw;
+  font-size: 2rem;
 `;
 
 export { FlexWrapper, Button, Board, Flights, Error };

@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import { openModal } from "../../redux/locationModal/modalActions";
-import * as S from "./Location.Styles";
+
 import LocationModal from "../LocationModal/LocationModal";
 import locationIcon from "../../assets/location-icon.png";
+import * as S from "./Location.Styles";
 
 const Location = () => {
   const location = useSelector(state => state.location.location);

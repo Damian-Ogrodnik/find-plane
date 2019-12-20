@@ -1,4 +1,5 @@
 import React from "react";
+
 import * as S from "./Flight.Styles";
 
 const Flight = ({ flight: { callsign, origin_country, distance } }) => {
