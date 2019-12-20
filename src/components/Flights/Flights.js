@@ -54,7 +54,9 @@ const Flights = () => {
       <S.FlexWrapper>
         <S.Button onClick={() => getNearestFlights()}>GET FLIGHTS</S.Button>
         <Spinner />
-        {renderError()}
+        {locationError && clicked && (
+          <S.Error>YOU HAVE TO SET LOCATION BEFORE SEARCH</S.Error>
+        )}
       </S.FlexWrapper>
       {renderFlights()}
     </S.Flights>
