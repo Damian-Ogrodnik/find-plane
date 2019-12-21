@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { selectLocation } from "../../redux/selectedLocation/selectLocationActions";
 import { Map, GoogleApiWrapper, InfoWindow } from "google-maps-react";
+
+import LoadingContainer from "../LoadingContainer/LoadingContainer";
 import * as S from "./GoogleMap.Styles";
 
 const mapStyles = {
@@ -89,5 +91,6 @@ const mapStateToProps = state => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyAUjCt82CRJ4gJW92PLix2ul981OcvpmFA"
+  apiKey: "AIzaSyAUjCt82CRJ4gJW92PLix2ul981OcvpmFA",
+  LoadingContainer: LoadingContainer
 })(connect(mapStateToProps, mapDispatchToProps)(GoogleMap));
