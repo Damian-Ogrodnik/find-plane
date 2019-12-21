@@ -27,7 +27,8 @@ const Flights = () => {
   }, [flights]);
 
   const getNearestFlights = () => {
-    if (locationError) return setClick(true);
+    if (locationError || Object.entries(location).length === 0)
+      return setClick(true);
     setClick(false);
     dispatch(resetNearestFlights());
     dispatch(fetchFlights());
@@ -45,15 +46,13 @@ const Flights = () => {
       );
     }
   };
-
   return (
     <S.Flights>
       <S.FlexWrapper>
         <S.Button onClick={() => getNearestFlights()}>GET FLIGHTS</S.Button>
         <Spinner />
-        {locationError && clicked && (
-          <S.Error>YOU HAVE TO SET LOCATION BEFORE SEARCH</S.Error>
-        )}
+        {(locationError || Object.entries(location).length === 0) &&
+          clicked && <S.Error>YOU HAVE TO SET LOCATION BEFORE SEARCH</S.Error>}
       </S.FlexWrapper>
       {renderFlights()}
     </S.Flights>
