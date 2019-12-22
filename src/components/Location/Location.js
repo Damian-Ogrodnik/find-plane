@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { openModal } from "../../redux/locationModal/modalActions";
 
-import LocationModal from "../LocationModal/LocationModal";
+import { LocationModal } from "../LocationModal";
 import locationIcon from "../../assets/location-icon.png";
 import * as S from "./Location.Styles";
 
@@ -44,4 +44,4 @@ const Location = () => {
   );
 };
 
-export default Location;
+export { Location };

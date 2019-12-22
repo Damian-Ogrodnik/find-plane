@@ -38,4 +38,4 @@ const BoardHeader = () => {
   );
 };
 
-export default BoardHeader;
+export { BoardHeader };

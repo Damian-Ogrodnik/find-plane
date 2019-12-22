@@ -6,7 +6,7 @@ const LoaderWrapper = styled.div`
   align-items: center;
   justify-content: center;
   div:first-child {
-    height: 1.5rem;
+    height: 1.5rem !important;
   }`;
 
 const Paragraph = styled.p`

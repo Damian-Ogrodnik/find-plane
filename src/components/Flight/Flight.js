@@ -33,4 +33,4 @@ const Flight = ({ flight: { callsign, origin_country, distance } }) => {
   );
 };
 
-export default Flight;
+export { Flight };

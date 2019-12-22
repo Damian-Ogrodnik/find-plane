@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import getLocation from "../../redux/location/locationUtils";
 
-import Location from "../Location/Location";
+import { Location } from "../Location";
 import logo from "../../assets/airport-icon.png";
 import * as S from "./Header.Styles";
 
@@ -26,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export { Header };

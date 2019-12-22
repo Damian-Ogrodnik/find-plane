@@ -12,4 +12,4 @@ function LoadingContainer() {
   );
 }
 
-export default LoadingContainer;
+export { LoadingContainer };

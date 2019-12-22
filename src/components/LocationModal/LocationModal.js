@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Modal from "react-modal";
+
 import { closeModal } from "../../redux/locationModal/modalActions";
 import { getLocationSucces } from "../../redux/location/locationActions";
+
+import { GoogleMap } from "../Map";
 import * as S from "./LocationModal.Styles";
-import GoogleMap from "../Map/GoogleMap";
 
 const customStyles = {
   content: {
@@ -53,4 +55,4 @@ const LocationModal = () => {
   );
 };
 
-export default LocationModal;
+export { LocationModal };

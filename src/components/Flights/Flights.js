@@ -5,9 +5,10 @@ import { fetchFlights } from "../../redux/flights/flightsUtils";
 import { resetNearestFlights } from "../../redux/nearestFlights/nearestActions";
 import { setNearestFlights } from "../../redux/nearestFlights/nearestUtils";
 
-import Spinner from "../Spinner/Spinner";
-import Flight from "../Flight/Flight";
-import BoardHeader from "../BoardHeader/BoardHeader";
+import { Spinner } from "../Spinner";
+import { Flight } from "../Flight";
+import { BoardHeader } from "../BoardHeader";
+
 import * as S from "./Flights.Styles";
 
 const Flights = () => {
@@ -59,4 +60,4 @@ const Flights = () => {
   );
 };
 
-export default Flights;
+export { Flights };
