@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/find-plane/static/js/main.9a942f40.chunk.js",
+    "main.js.map": "/find-plane/static/js/main.9a942f40.chunk.js.map",
+    "runtime-main.js": "/find-plane/static/js/runtime-main.047bcba6.js",
+    "runtime-main.js.map": "/find-plane/static/js/runtime-main.047bcba6.js.map",
+    "static/js/2.d172341d.chunk.js": "/find-plane/static/js/2.d172341d.chunk.js",
+    "static/js/2.d172341d.chunk.js.map": "/find-plane/static/js/2.d172341d.chunk.js.map",
+    "index.html": "/find-plane/index.html",
+    "precache-manifest.6a452d0c06fab2c6ae0e88d238f4bfb3.js": "/find-plane/precache-manifest.6a452d0c06fab2c6ae0e88d238f4bfb3.js",
+    "service-worker.js": "/find-plane/service-worker.js",
+    "static/media/airport-icon.png": "/find-plane/static/media/airport-icon.d24fab1b.png",
+    "static/media/location-icon.png": "/find-plane/static/media/location-icon.2679cbd1.png",
+    "static/media/plane-background.jpg": "/find-plane/static/media/plane-background.16451de9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.047bcba6.js",
+    "static/js/2.d172341d.chunk.js",
+    "static/js/main.9a942f40.chunk.js"
+  ]
+}
