@@ -10,7 +10,7 @@ const mapStyles = {
   width: "100%",
   height: "100%",
   textShadow: "none",
-  border: "2px solid black"
+  border: "0.2rem solid black"
 };
 
 class GoogleMap extends React.Component {
